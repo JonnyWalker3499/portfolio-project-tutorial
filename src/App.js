@@ -1,11 +1,17 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from './components/Navbar';
+import Header from "./components/Header";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 
 function App() {
    return (
-      <Navbar />
+      <div>
+         <ParticlesBackground />
+         <Navbar />
+         <Header />
+      </div>
    );
 }
 
