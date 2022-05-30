@@ -3,6 +3,8 @@
 :root {
    --primary-white: #ffffff;
    --primary-light-grey: #f4f4f4;
+   --primary-grey: #ccd1d9;
+   --primary-dark-grey: #666666;
    --primary-orange: #f9ab00;
    --primary-dark: rgb(52,59,64);
    --primary-red: #ef4035;
@@ -179,6 +181,64 @@ nav ul li {
    color: var(--primary-white);
 }
 
+/************ EXPERIENCE **********/
+.experience {
+   padding: 0.7rem;
+}
+.experience-wrapper {
+   position:relative;
+   padding: 3.125rem 0;
+   overflow: hidden;
+}
+.experience h1 {
+   text-transform: uppercase;
+   color: var(--primary-orange);
+}
+.experience-wrapper::before {
+   position: absolute;
+   content: "";
+   top: 0;
+   left: 50%;
+   margin-left: -0.0625rem;
+   width: 0.125rem;
+   height: 100%;
+   background: var(--primary-grey);
+   z-index: 1;
+}
+.timeline-block {
+   width: calc(50% + 0.5rem);
+   display: flex;
+   justify-content: space-between;
+   clear: both;
+}
+.timeline-block-right {
+   float: right;
+}
+.timeline-block-left {
+   float: left;
+   direction: rtl;
+}
+.marker {
+   width: 1rem;
+   height: 1rem;
+   border-radius: 50%;
+   border: 0.3125rem solid var(--primary-dark);
+   background: var(--primary-orange);
+   margin-top: 0.625rem;
+   z-index: 3;
+}
+.timeline-content {
+   width: 95%;
+   padding: 0 0.9375rem;
+   color: var(--primary-dark-grey);
+   direction: ltr;
+}
+.timeline-content h3{
+   margin-top: 0.3125rem;
+   color: var(--primary-red);
+   font-weight: 900;
+}
+
 /************ RESPONSIVE **********/
 
 @media(min-width: 360px) {
@@ -234,6 +294,31 @@ nav ul li {
       margin-bottom: 1.875rem;
       background: var(--primary-white);
    }
+
+   /****** EXPERIENCE *******/
+   
+   .experience .container {
+      padding-left: 0;
+   }
+   .experience-wrapper {
+      padding-left: 0;
+   }
+   .experience-wrapper::before {
+      left: 0.5rem;
+      margin-bottom: 1.875rem;
+   }
+   .experience p {
+      font-size: 1.8rem;
+   }
+   .timeline-block-right {
+      float: none;
+      width: 100%;
+   }
+   .timeline-block-left {
+      float: none;
+      direction: ltr;
+      width: 100%;
+   }
 }
 
 
@@ -247,7 +332,7 @@ nav ul li {
    .about-text {
       font-size: 1.8rem;
    }
-      /****** SERVICES ******/
+   /****** SERVICES ******/
    .services h3 {
       font-size: 2.5rem;
    }
@@ -260,6 +345,7 @@ nav ul li {
       margin-bottom: 1.875rem;
       background: var(--primary-white);
    }
+   
 }
 
 @media(min-width: 1280px) {
@@ -297,7 +383,64 @@ nav ul li {
 
    /**** SERVICES ****/
    .services p {
-   font-size: 1.5rem;
-}
+      font-size: 1.5rem;
+   }
+   /**** EXPERIENCE ****/
+   .experience {
+      padding: 0.7rem;
+   }
+   .experience-wrapper {
+      position:relative;
+      padding: 3.125rem 0;
+      overflow: hidden;
+   }
+   .experience h1 {
+      text-transform: uppercase;
+      color: var(--primary-orange);
+   }
+   .experience-wrapper::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 50%;
+      margin-left: -0.3625rem;
+      width: 0.125rem;
+      height: 100%;
+      background: var(--primary-grey);
+      z-index: 1;
+   }
+   .timeline-block {
+      width: calc(50% + 0.5rem);
+      display: flex;
+      justify-content: space-between;
+      clear: both;
+   }
+   .timeline-block-right {
+      float: right;
+   }
+   .timeline-block-left {
+      float: left;
+      direction: rtl;
+   }
+   .marker {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      border: 0.3125rem solid var(--primary-dark);
+      background: var(--primary-orange);
+      margin-top: 0.625rem;
+      z-index: 3;
+   }
+   .timeline-content {
+      width: 95%;
+      padding: 0 0.9375rem;
+      color: var(--primary-dark-grey);
+      direction: ltr;
+   }
+   .timeline-content h3{
+      margin-top: 0.3125rem;
+      color: var(--primary-red);
+      font-weight: 900;
+   }
 
 }
