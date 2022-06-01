@@ -6,6 +6,7 @@ import ParticlesBackground from "./components/ParticlesBackground";
 import AboutMe from "./components/AboutMe";
 import Services from "./components/Services";
 import Experience from "./components/Experience";
+import Portfolio from "./components/Portfolio";
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
          <ParticlesBackground />
          <AboutMe />
          <Services />
-         <Experience/>
+         <Experience />
+         <Portfolio />
       </div>
    );
 }

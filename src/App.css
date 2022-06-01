@@ -9,6 +9,7 @@
    --primary-dark: rgb(52,59,64);
    --primary-red: #ef4035;
    --primary-hover-red: #f33501;
+   --primary-black: #000000;
 
 
 }
@@ -21,7 +22,7 @@ body {
    font-family: "Roboto-Condensed", sans-serif !important;
 }
 
-/************************ NAVBAR ****************************/
+/************************ NAVBAR ************************************/
 .logo {
    width: 16.25rem;
 }
@@ -60,7 +61,7 @@ nav ul li {
 
 
 
-/*************** HEADER ********************/
+/*********************** HEADER ************************************/
 
 .header-wraper {
    position: relative;
@@ -88,7 +89,7 @@ nav ul li {
    text-transform: uppercase;
 }
 
-/************* TYPED TEXT ****************/
+/********************* TYPED TEXT ********************************/
 
 .typewriter-pro {
    font-size: 2rem;
@@ -96,7 +97,7 @@ nav ul li {
 }
 
 
-/************ HEADER MAIN OFFER BUTTON **********/
+/******************** HEADER MAIN OFFER BUTTON ******************/
 .btn-main-offer {
    border: 1px solid var(--primary-red);
    text-transform: uppercase;
@@ -114,7 +115,7 @@ nav ul li {
    transition: .2s ease-in-out;
 }
 
-/************ ABOUT ME **********/
+/******************** ABOUT ME **************************/
 .profile-img {
    width: 16rem;
    border-radius: 50%;
@@ -133,7 +134,7 @@ nav ul li {
       justify-content: center;
    }
 
-/************ SERVICES **********/
+/******************** SERVICES **************************/
 .services {
    text-align: center;
    padding: 2rem;
@@ -166,6 +167,7 @@ nav ul li {
    padding: 0.625rem;
    margin-bottom: 0.875rem;
    background: var(--primary-white);
+   transition: 0.3s ease-in-out;
 }
 .services .box:hover {
    background: var(--primary-orange);
@@ -181,7 +183,7 @@ nav ul li {
    color: var(--primary-white);
 }
 
-/************ EXPERIENCE **********/
+/******************** EXPERIENCE **************************/
 .experience {
    padding: 0.7rem;
 }
@@ -239,7 +241,68 @@ nav ul li {
    font-weight: 900;
 }
 
-/************ RESPONSIVE **********/
+/******************** PORTFOLIO **************************/
+
+.portfolio-wrapper {
+   background: var(--primary-light-grey);
+   padding: 3rem 0;
+}
+.portfolio-wrapper h1 {
+   color: var(--primary-orange);
+}
+.portfolio-image {
+   width: 15rem;
+   border: 1px solid var(--primary-orange);
+   padding: 0 0.5rem;
+}
+.portfolio-image-box {
+   position: relative;
+   margin: 1rem;
+}
+
+/*--- OVERFLOW BOX ---*/
+.overflow {
+   position: absolute;
+   opacity: 0;
+   background: var(--primary-black);
+   width: 15rem;
+   height: 8rem;
+   top: 0;
+   border: 1px solid var(--primary-red);
+   cursor: pointer;
+}
+.portfolio-image-box:hover .overflow {
+   opacity: 60%;
+   transform: 0.3s ease-in-out;
+}
+.portfolio-icon {
+   position: absolute;
+   opacity: 0;
+   margin-left: -8rem;
+   margin-top: 3.6rem;
+   color: var(--primary-orange);
+   font-size: 1.5rem;
+}
+.portfolio-image-box:hover .portfolio-icon {
+   opacity: 70%;
+   transition: 0.3s ease-in-out;
+   cursor: pointer;
+}
+
+/*--- OVERFLOW BOX ---*/
+.portfolio-image-popupbox {
+   width: 45rem;
+   padding: 0 0.5rem;
+}
+.hyper-link {
+   cursor: pointer;
+   color: var(--primary-orange);
+}
+.hyper-link:hover {
+   color: var(--primary-red);
+}
+
+/********************************** RESPONSIVE **************************/
 
 @media(min-width: 360px) {
    .navbar-brand {
@@ -263,7 +326,7 @@ nav ul li {
    .btn-main-offer {
       font-size: 2rem;
    }
-   /*** ABOUT ME ***/
+   /*--- ABOUT ME ---*/
    .profile-img {
       width: 25rem;
 
@@ -281,7 +344,7 @@ nav ul li {
       font-size: 1.8rem;
    }
 
-   /****** SERVICES ******/
+   /*--- SERVICES ---*/
    .services h3 {
       font-size: 2.5rem;
    }
@@ -295,7 +358,7 @@ nav ul li {
       background: var(--primary-white);
    }
 
-   /****** EXPERIENCE *******/
+   /*--- EXPERIENCE ---*/
    
    .experience .container {
       padding-left: 0;
@@ -319,6 +382,21 @@ nav ul li {
       direction: ltr;
       width: 100%;
    }
+
+   /*--- PORTFOLIO ---*/
+   .portfolio-image {
+      width: 45rem;
+      border: 1px solid var(--primary-orange);
+      padding: 0;
+      margin-left: -12rem;
+      margin-bottom: 2rem;
+   }
+
+   /*--- OVERFLOW BOX ---*/
+   .portfolio-image-popupbox {
+      width: 100%;
+   }
+
 }
 
 
@@ -332,7 +410,7 @@ nav ul li {
    .about-text {
       font-size: 1.8rem;
    }
-   /****** SERVICES ******/
+   /*--- SERVICES ---*/
    .services h3 {
       font-size: 2.5rem;
    }
@@ -346,6 +424,16 @@ nav ul li {
       background: var(--primary-white);
    }
    
+}
+
+@media(min-width: 1024) {
+   .portfolio-image {
+      width: 50rem;
+      border: 1px solid var(--primary-orange);
+      padding: 0 0.5rem;
+      margin-left: -14rem;
+   }
+
 }
 
 @media(min-width: 1280px) {
@@ -381,11 +469,11 @@ nav ul li {
       font-size: 1.5rem;
    }
 
-   /**** SERVICES ****/
+   /*--- SERVICES ---*/
    .services p {
       font-size: 1.5rem;
    }
-   /**** EXPERIENCE ****/
+   /*--- EXPERIENCE ---*/
    .experience {
       padding: 0.7rem;
    }
@@ -443,4 +531,47 @@ nav ul li {
       font-weight: 900;
    }
 
+   /*--- PORTFOLIO ---*/
+   .portfolio-icon {
+   position: absolute;
+   opacity: 0;
+   margin-left: 6rem;
+   margin-top: -4rem;
+   color: var(--primary-orange);
+   font-size: 1.5rem;
+   }
+   .portfolio-image-box:hover .portfolio-icon {
+      opacity: 70%;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+   }
+   .portfolio-image {
+      width: 15rem;
+      border: 1px solid var(--primary-orange);
+      padding: 0 0.5rem;
+      margin-left: 0rem;
+   }
+
+}
+
+/*************************** RESPONSIVE HEIGHT ****************************/
+@media(max-height: 280px) {
+   .popupbox-wrapper {
+      height: 90%;
+   }
+   .portfolio-image-popupbox {
+      width: 30%;
+   }
+}
+
+@media(max-height: 570px) {
+   .popupbox-wrapper {
+      height: 100%;
+   }
+}
+
+@media(max-height: 768px) {
+   .portfolio-image-popupbox {
+      width: 100%;
+   }
 }
