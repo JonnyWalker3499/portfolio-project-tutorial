@@ -6,7 +6,7 @@
    --primary-grey: #ccd1d9;
    --primary-dark-grey: #666666;
    --primary-orange: #f9ab00;
-   --primary-dark: rgb(52,59,64);
+   --primary-dark: rgb(33,37,41);
    --primary-red: #ef4035;
    --primary-hover-red: #f33501;
    --primary-black: #000000;
@@ -25,6 +25,10 @@ body {
 }
 
 /************************ NAVBAR ************************************/
+
+nav {
+   z-index: 2;
+}
 .logo {
    width: 16.25rem;
 }
@@ -53,7 +57,7 @@ nav ul li {
    height: 4rem !important;
 }
 
-.navbar-nav > li > a.active, .navbar-nav > li > a.active:focus {
+.navbar-nav > li > a.active, .navbar-nav > li > a:focus {
    border-top: 0.1875rem solid var(--primary-orange);
 }
 
@@ -70,7 +74,7 @@ nav ul li {
    background: url(wall-and-laptop-background.jpg) no-repeat;
    background-size: cover;
    background-position: center;
-   height: 90vh;
+   height: 100vh;
 }
 
 .main-info {
@@ -84,6 +88,7 @@ nav ul li {
    justify-content: center;
    align-items: center;
    text-align: center;
+   z-index: 1;
    font-family: "Roboto Condensed", sans-serif;
 }
 .main-info h1 {
@@ -296,6 +301,7 @@ nav ul li {
    width: 45rem;
    padding: 0 0.5rem;
 }
+
 .hyper-link {
    cursor: pointer;
    color: var(--primary-orange);
@@ -574,7 +580,7 @@ nav ul li {
 
 @media(max-height: 768px) {
    .portfolio-image-popupbox {
-      width: 100%;
+      width: 60%;
    }
 }
 
@@ -715,4 +721,23 @@ textarea.form-control {
    .contacts p {
       padding: 0 0.4rem;
    }
+}
+
+/************************ FOOTER COMPONENT ****************/
+.footer {
+   background: var(--primary-black);
+   color: var(--primary-dark-grey);
+   padding: 3rem;
+}
+.footer a {
+   text-decoration: none;
+   color: var(--primary-dark-grey);
+}
+.footer a:hover {
+   text-decoration: none;
+   color: var(--primary-orange);
+   cursor: pointer;
+}
+.footer p {
+   margin-bottom: 0;
 }

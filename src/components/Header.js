@@ -1,11 +1,12 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import "react-simple-typewriter/dist/index.js";
+import { Link } from "react-scroll/modules";
 
 const Header = () => {
 
   return (
-     <div className="header-wraper">
+     <div id="home" className="header-wraper">
         <div className="main-info">
            <h1>web development and website promotions</h1>
            <span className="typewriter-pro">
@@ -19,7 +20,7 @@ const Header = () => {
                   delaySpeed={1500}
                />
            </span>
-           <a href="#" className="btn-main-offer">contact me</a>
+           <Link smooth={true} to="contacts" offset={-110} className="btn-main-offer">contact me</Link>
         </div>
     </div>
   )
